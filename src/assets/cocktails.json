@@ -13,5 +13,10 @@
         "name": "Mojito",
         "price": 6,
         "img": "https://static.750g.com/images/600-600/b520523117d647dab6b842a36f4cc7f5/mojito-le-vrai.jpg"
+    },
+    {
+        "name": "Mojito Banane",
+        "price": 6.5,
+        "img": "https://static.750g.com/images/600-600/b520523117d647dab6b842a36f4cc7f5/mojito-le-vrai.jpg"
     }
 ]
