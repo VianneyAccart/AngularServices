@@ -1,19 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { CocktailService } from '../cocktail.service';
+import { Cocktail } from '../shared/models/Cocktail.model';
 
 @Component({
   selector: 'app-cocktail-list',
   templateUrl: './cocktail-list.component.html',
-  styleUrls: ['./cocktail-list.component.css']
+  styleUrls: ['./cocktail-list.component.css'],
 })
+
 export class CocktailListComponent implements OnInit {
 
-  cocktails: any
+  cocktails: Cocktail[] = new Array();
 
-  constructor(public cocktail: CocktailService) { } // Injection du service CocktailService
+  private service: CocktailService;
 
-  ngOnInit(): void {
-    this.cocktails = this.cocktail.getCocktails() // Récupère les cocktails du service
+  constructor(param_service: CocktailService) {
+    this.service = param_service;
+    this.cocktails = new Array();
   }
 
+  ngOnInit(): void {
+    this.service.getCocktails().subscribe(
+
+    )
+  }
 }
